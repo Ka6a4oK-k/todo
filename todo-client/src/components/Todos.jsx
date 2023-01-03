@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { Table, Checkbox, Button, Modal, Input } from 'antd'
+import { Table, Checkbox, Button, Modal, Input, Typography } from 'antd'
 import axios from 'axios'
 import { TodosContext } from '../context/todosContext'
 
@@ -46,6 +46,7 @@ export default function ActiveTodos({ todos, completed }) {
             title: 'Tasks',
             dataIndex: 'task',
             key: 'task',
+            render: task => <Typography.Text>{task}</Typography.Text>
         },
         {
             title: 'Actions',
